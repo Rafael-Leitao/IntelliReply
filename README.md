@@ -1,17 +1,30 @@
 # IntelliReply
 
-IntelliReply is a Python-based application designed to automate customer email responses using AI. It fetches customer emails, generates AI-powered replies, allows for employee approval, and sends the approved replies back to customers.
+IntelliReply is an AI-powered email assistant designed to process customer emails, analyze their context, and generate human-like responses. The assistant allows employees to review and approve AI-generated replies before sending, ensuring efficiency and professionalism.
+
+## Installation
+
+Clone the repository, create a virtual environment, and install the dependencies listed in `requirements.txt`. Use the `.env` file to configure environment variables like `OPENAI_API_KEY`, `SMTP_SERVER`, `EMAIL_ADDRESS`, and `EMAIL_PASSWORD`.
 
 ## Features
 
-- Fetch incoming emails using IMAP.
-- Generate AI-powered, professional email replies using OpenAI GPT.
-- Display AI-generated replies for employee approval.
-- Send approved replies to customers using SMTP.
+- Email processing with `imaplib` and `smtplib`.
+- AI-powered reply generation using OpenAI's API.
+- Employee review and approval before email replies are sent.
+- Flask backend with SQLAlchemy for database management.
 
-## Tech Stack
+## Usage
 
-- **Backend:** Python
-- **AI/NLP:** OpenAI GPT
-- **Email Handling:** IMAP/SMTP
-- **Environment Management:** Python `venv`, `.env` files
+Run the Flask application to process incoming emails and generate replies. Approve replies via the provided interface before sending.
+
+## Project Structure
+
+- `env/`: Virtual environment directory (excluded from version control)
+- `app/`: Application code, including routes, models, and utilities
+- `migrations/`: Database migrations
+- `tests/`: Unit tests
+- `requirements.txt`: Project dependencies
+
+## License
+
+This project is licensed under the MIT License.
